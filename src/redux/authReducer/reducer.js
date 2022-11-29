@@ -1,6 +1,6 @@
 import * as types from './actionTypes'
 const initialState = {
-  isAuth: true,
+  isAuth: false,
   token: "",
   isLoading: false,
   isError: false,
