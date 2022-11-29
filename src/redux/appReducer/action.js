@@ -1,26 +1,14 @@
 import axios from "axios";
-import * as types from "./actionType";
-export const getRestaurantsData = (page) => (dispatch) => {
-  console.log("action", page);
-  dispatch({ type: types.GET_RESTAURANT_DATA_REQUEST });
+import * as types from "./actionTypes";
+export const getCapsulesData = (page) => (dispatch) => {
+  //   console.log("action", page);
+  dispatch({ type: types.GET_CAPSULES_DATA_REQUEST });
   return axios
-    .get(
-      `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/getrestaurants?page=${page}&limit=20`
-    )
+    .get(`https://api.spacexdata.com/v3/capsules`)
     .then(({ data }) =>
-      dispatch({ type: types.GET_RESTAURANT_DATA_SUCCESS, payload: data.data })
+      dispatch({ type: types.GET_CAPSULES_DATA_SUCCESS, payload: data })
     )
-    .catch((err) => dispatch({ type: types.GET_RESTAURANT_DATA_FAILURE }));
+    .catch((err) => dispatch({ type: types.GET_CAPSULES_DATA_FAILURE }));
 };
 
-export const filterByType = (payload) => (dispatch) => {
-       dispatch({ type: types.FILTER_BY_TYPE, payload: payload})
-}
-
-export const sortByPrice = (payload) => (dispatch) => {
-      dispatch({ type: types.SORT_BY_PRICE,payload})
-}
-export const sortByRating = (payload) => (dispatch) => {
-      dispatch({ type: types.SORT_BY_RATING,payload})
-}
 //just checking if this is working or not

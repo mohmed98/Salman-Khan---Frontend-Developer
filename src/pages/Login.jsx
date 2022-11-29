@@ -53,7 +53,7 @@ export default function Login() {
     >
       <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
         <Stack align={"center"}>
-          <Heading fontSize={"4xl"}>Sign in to your account</Heading>
+          <Heading fontSize={"4xl"}>Welcome to spaceX</Heading>
         </Stack>
         <Box
           rounded={"lg"}
@@ -64,7 +64,7 @@ export default function Login() {
           <Stack spacing={4}>
             <FormControl id="email">
               <FormLabel>Email address</FormLabel>
-              <Input type="email" onChange={handleChange} />
+              <Input type="email" onChange={handleChange}/>
             </FormControl>
             <FormControl id="password">
               <FormLabel>Password</FormLabel>

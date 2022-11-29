@@ -3,7 +3,6 @@ import {
     Flex,
     Avatar,
     HStack,
-    Link,
     IconButton,
     Button,
     Menu,
@@ -17,6 +16,7 @@ import {
     Heading,
   } from "@chakra-ui/react";
   import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+  import {Link} from 'react-router-dom'
   import {FaRocket} from 'react-icons/fa'
   const Links = ["Dashboard", "Projects", "Team"];
   
@@ -51,9 +51,14 @@ import {
             />
             <HStack spacing={8} alignItems={"center"} >
               <Box fontWeight="bold" fontSize="20px">
-                <Link href={'/spaceX'}> <FaRocket fontSize="35px"/> </Link>
+                <Link to={'/spaceX'}>  <FaRocket fontSize="35px"/> </Link>
               </Box>
             </HStack>
+            <HStack spacing={8} alignItems={"center"}>
+            <Box fontWeight="bold" fontSize="20px">
+              <Link href={''}>spaceX</Link>
+            </Box>
+          </HStack>
           </Flex>
   
           {isOpen ? (
