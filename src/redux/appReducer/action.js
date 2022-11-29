@@ -23,3 +23,4 @@ export const sortByPrice = (payload) => (dispatch) => {
 export const sortByRating = (payload) => (dispatch) => {
       dispatch({ type: types.SORT_BY_RATING,payload})
 }
+//just checking if this is working or not
