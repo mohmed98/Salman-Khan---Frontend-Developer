@@ -16,7 +16,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import { login } from "../Redux/authReducer/action";
+import { login } from "../redux/authReducer/action";
 export default function Login() {
   const dispatch = useDispatch();
   const location = useLocation();
@@ -37,8 +37,10 @@ export default function Login() {
   const handleSubmit = () => {
     if (formData.email && formData.password) {
       dispatch(login(formData)).then(() => {
-        navigate(comingFrom, { replace: true });
+        navigate('/spaceX');
       });
+    }else{
+      alert('Please enter a valid email')
     }
   };
 
