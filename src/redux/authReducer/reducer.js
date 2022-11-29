@@ -1,4 +1,4 @@
-import * as types from './actionType'
+import * as types from './actionTypes'
 const initialState = {
   isAuth: false,
   token: "",
@@ -20,4 +20,4 @@ const reducer = (state = initialState,action) => {
   }
 };
 
-export { reducer };
+export  {reducer};
